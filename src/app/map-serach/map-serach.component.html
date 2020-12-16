@@ -1,0 +1,17 @@
+<form [formGroup]="searchForm" (ngSubmit)="onSubmitCityTourism()">
+    <div class="search_Data">
+  
+      <div class="city_Form">
+        <label>City: </label>
+        <select formControlName="city" >
+          <option  *ngFor="let city of cities" [value]="city" > {{city}}</option>
+        </select>
+      </div>
+  
+      <div class="tourism_Form">
+        <label>Tourism: </label>
+        <input type="text" formControlName="tourism" > 
+      </div>
+  
+    </div>
+  </form>

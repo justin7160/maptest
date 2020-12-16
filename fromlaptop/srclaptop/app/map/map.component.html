@@ -1,0 +1,25 @@
+<!--<div id="map"></div>-->
+<!-- <div class="map-container"> -->
+    <form>
+        lat：<input type="text"  name="lat" #mylat><br>
+        lon：<input type="text"  name="lon" #mylon><br>
+        <input type="button" (click)=markPoint(mylat.value,mylon.value) value="送出" >
+    </form>
+    <div class="map-frame">
+         <div id="map"></div>
+     </div>
+    <div class="add">
+        <input type="button" (click)=storePoint() value="加入行程"><br>
+    </div>
+    <div class="add">
+        <p>緯度:<input type="text" name="lat" #addlat><br>
+           經度:<input type="text" name="lon" #addlon><br>
+        <input type="button" (click)=addPoint(addlat.value,addlon.value) value="送出" >
+        輸入經緯度加入</p>
+    </div>
+    <div class="delete">
+        <p>delete:<input type="number" name="theOne" #theOne><br>
+        <input type="button" (click)=removePoint(theOne.value) value="送出" >
+        刪除第幾個就輸入幾</p>
+    </div>
+  <!-- </div> -->
